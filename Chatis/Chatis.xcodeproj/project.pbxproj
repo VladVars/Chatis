@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CEA8818B2DBE22C8E847C7E2 /* Pods_Chatis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D8C20977E2532A5691BF8B /* Pods_Chatis.framework */; };
 		D10CD35B2974217E0092ED02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10CD35A2974217E0092ED02 /* AppDelegate.swift */; };
 		D10CD35D2974217E0092ED02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10CD35C2974217E0092ED02 /* SceneDelegate.swift */; };
 		D10CD35F2974217E0092ED02 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10CD35E2974217E0092ED02 /* ConversationsViewController.swift */; };
@@ -20,9 +21,12 @@
 		D10CD37F297424A90092ED02 /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10CD37E297424A90092ED02 /* NewConversationViewController.swift */; };
 		D10CD381297424B70092ED02 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10CD380297424B70092ED02 /* ProfileViewController.swift */; };
 		D10CD3842974397D0092ED02 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10CD3832974397D0092ED02 /* Extensions.swift */; };
+		D10CD3862975C0D40092ED02 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D10CD3852975C0D40092ED02 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01AC06EE5A7D26D40926E57A /* Pods-Chatis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatis.release.xcconfig"; path = "Target Support Files/Pods-Chatis/Pods-Chatis.release.xcconfig"; sourceTree = "<group>"; };
+		08D8C20977E2532A5691BF8B /* Pods_Chatis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chatis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D10CD3572974217E0092ED02 /* Chatis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D10CD35A2974217E0092ED02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D10CD35C2974217E0092ED02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +42,8 @@
 		D10CD37E297424A90092ED02 /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		D10CD380297424B70092ED02 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D10CD3832974397D0092ED02 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D10CD3852975C0D40092ED02 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D89928916A49AD51E45BFD5E /* Pods-Chatis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatis.debug.xcconfig"; path = "Target Support Files/Pods-Chatis/Pods-Chatis.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +51,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA8818B2DBE22C8E847C7E2 /* Pods_Chatis.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		412AA116B306C8BB5AB12B7B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D89928916A49AD51E45BFD5E /* Pods-Chatis.debug.xcconfig */,
+				01AC06EE5A7D26D40926E57A /* Pods-Chatis.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D10CD34E2974217E0092ED02 = {
 			isa = PBXGroup;
 			children = (
 				D10CD3592974217E0092ED02 /* Chatis */,
 				D10CD3582974217E0092ED02 /* Products */,
+				412AA116B306C8BB5AB12B7B /* Pods */,
+				D1B5E7203DC4F01C35EF3D1F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +88,7 @@
 		D10CD3592974217E0092ED02 /* Chatis */ = {
 			isa = PBXGroup;
 			children = (
+				D10CD3852975C0D40092ED02 /* GoogleService-Info.plist */,
 				D10CD372297422040092ED02 /* Resources */,
 				D10CD371297421F60092ED02 /* ViewModels */,
 				D10CD370297421ED0092ED02 /* Models */,
@@ -144,6 +163,14 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		D1B5E7203DC4F01C35EF3D1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08D8C20977E2532A5691BF8B /* Pods_Chatis.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,9 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D10CD36B2974217F0092ED02 /* Build configuration list for PBXNativeTarget "Chatis" */;
 			buildPhases = (
+				E2E2417871310935B1CBDC32 /* [CP] Check Pods Manifest.lock */,
 				D10CD3532974217E0092ED02 /* Sources */,
 				D10CD3542974217E0092ED02 /* Frameworks */,
 				D10CD3552974217E0092ED02 /* Resources */,
+				884FE7A0591F565B1DAE8D3B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -203,12 +232,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				D10CD3672974217F0092ED02 /* LaunchScreen.storyboard in Resources */,
+				D10CD3862975C0D40092ED02 /* GoogleService-Info.plist in Resources */,
 				D10CD3642974217F0092ED02 /* Assets.xcassets in Resources */,
 				D10CD3622974217E0092ED02 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		884FE7A0591F565B1DAE8D3B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chatis/Pods-Chatis-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chatis/Pods-Chatis-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chatis/Pods-Chatis-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2E2417871310935B1CBDC32 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chatis-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D10CD3532974217E0092ED02 /* Sources */ = {
@@ -366,6 +438,7 @@
 		};
 		D10CD36C2974217F0092ED02 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D89928916A49AD51E45BFD5E /* Pods-Chatis.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -393,6 +466,7 @@
 		};
 		D10CD36D2974217F0092ED02 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01AC06EE5A7D26D40926E57A /* Pods-Chatis.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
