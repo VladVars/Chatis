@@ -7,14 +7,8 @@ target 'Chatis' do
 
   # Pods for Chatis
 
-#Firebase
-
 pod ‘Firebase/Core’
 pod ‘Firebase/Database’
 pod ‘Firebase/Auth’
 
-#Facebook
-
-pod 'FBSDKLoginKit'
-    
 end
