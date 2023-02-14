@@ -7,8 +7,11 @@
 
 import UIKit
 import FirebaseAuth
+import JGProgressHUD
 
 class LoginViewController: UIViewController {
+    
+    private let spinner = JGProgressHUD(style: .dark)
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -32,7 +35,7 @@ class LoginViewController: UIViewController {
         field.layer.borderWidth = 1
         field.layer.borderColor = UIColor.lightGray.cgColor
         field.placeholder = "Email Address..."
-        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 0))
+        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
         field.leftViewMode = .always
         field.backgroundColor = .white
         return field
@@ -47,7 +50,7 @@ class LoginViewController: UIViewController {
         field.layer.borderWidth = 1
         field.layer.borderColor = UIColor.lightGray.cgColor
         field.placeholder = "Password..."
-        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 0))
+        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
         field.leftViewMode = .always
         field.backgroundColor = .white
         field.isSecureTextEntry = true
@@ -127,11 +130,19 @@ class LoginViewController: UIViewController {
             alertUserLoginError()
             return
         }
+        
+        spinner.show(in: view)
+        
 //        Firebase Log In
         
         FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+            
             guard let strongSelf = self else {
                 return
+            }
+            
+            DispatchQueue.main.async {
+                strongSelf.spinner.dismiss(animated: true)
             }
             
             guard let result = authResult, error == nil else {
