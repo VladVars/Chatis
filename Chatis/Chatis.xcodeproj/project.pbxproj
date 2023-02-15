@@ -24,6 +24,7 @@
 		D10CD3862975C0D40092ED02 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D10CD3852975C0D40092ED02 /* GoogleService-Info.plist */; };
 		D10CD388297835E50092ED02 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10CD387297835E50092ED02 /* DatabaseManager.swift */; };
 		D1480B5E299BF18E00181103 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1480B5D299BF18E00181103 /* ChatViewController.swift */; };
+		D1480B60299CFF2700181103 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1480B5F299CFF2700181103 /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		D10CD3852975C0D40092ED02 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D10CD387297835E50092ED02 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		D1480B5D299BF18E00181103 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		D1480B5F299CFF2700181103 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		D89928916A49AD51E45BFD5E /* Pods-Chatis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatis.debug.xcconfig"; path = "Target Support Files/Pods-Chatis/Pods-Chatis.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +149,7 @@
 				D10CD35C2974217E0092ED02 /* SceneDelegate.swift */,
 				D10CD3832974397D0092ED02 /* Extensions.swift */,
 				D10CD387297835E50092ED02 /* DatabaseManager.swift */,
+				D1480B5F299CFF2700181103 /* StorageManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				D10CD35D2974217E0092ED02 /* SceneDelegate.swift in Sources */,
 				D1480B5E299BF18E00181103 /* ChatViewController.swift in Sources */,
 				D10CD37B297424660092ED02 /* PhotoViewerViewController.swift in Sources */,
+				D1480B60299CFF2700181103 /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
