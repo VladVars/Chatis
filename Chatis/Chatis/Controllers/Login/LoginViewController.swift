@@ -104,7 +104,7 @@ class LoginViewController: UIViewController {
         scrollView.addSubview(emailField)
         scrollView.addSubview(passwordField)
         scrollView.addSubview(loginButton)
-        scrollView.addSubview(facebookLoginButton)
+//        scrollView.addSubview(facebookLoginButton)
         
     }
     
@@ -129,7 +129,7 @@ class LoginViewController: UIViewController {
                                      height: 52)
         
         loginButton.frame = CGRect(x: 30,
-                                   y: passwordField.bottom+10,
+                                   y: passwordField.bottom+20,
                                    width: scrollView.width-60,
                                    height: 48)
         

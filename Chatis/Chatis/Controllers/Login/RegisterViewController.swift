@@ -175,9 +175,9 @@ class RegisterViewController: UIViewController {
                                      height: 52)
         
         registerButton.frame = CGRect(x: 30,
-                                   y: passwordField.bottom+10,
+                                   y: passwordField.bottom+20,
                                    width: scrollView.width-60,
-                                   height: 52)
+                                   height: 48)
     }
     
     @objc private func registerButtonTapped() {

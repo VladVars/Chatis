@@ -21,10 +21,10 @@
 		D10CD37F297424A90092ED02 /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10CD37E297424A90092ED02 /* NewConversationViewController.swift */; };
 		D10CD381297424B70092ED02 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10CD380297424B70092ED02 /* ProfileViewController.swift */; };
 		D10CD3842974397D0092ED02 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10CD3832974397D0092ED02 /* Extensions.swift */; };
-		D10CD3862975C0D40092ED02 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D10CD3852975C0D40092ED02 /* GoogleService-Info.plist */; };
 		D10CD388297835E50092ED02 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10CD387297835E50092ED02 /* DatabaseManager.swift */; };
 		D1480B5E299BF18E00181103 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1480B5D299BF18E00181103 /* ChatViewController.swift */; };
 		D1480B60299CFF2700181103 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1480B5F299CFF2700181103 /* StorageManager.swift */; };
+		D1480B6229BB688C00181103 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1480B6129BB688C00181103 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,10 +45,10 @@
 		D10CD37E297424A90092ED02 /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		D10CD380297424B70092ED02 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D10CD3832974397D0092ED02 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		D10CD3852975C0D40092ED02 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D10CD387297835E50092ED02 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		D1480B5D299BF18E00181103 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		D1480B5F299CFF2700181103 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		D1480B6129BB688C00181103 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D89928916A49AD51E45BFD5E /* Pods-Chatis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatis.debug.xcconfig"; path = "Target Support Files/Pods-Chatis/Pods-Chatis.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,7 +94,7 @@
 		D10CD3592974217E0092ED02 /* Chatis */ = {
 			isa = PBXGroup;
 			children = (
-				D10CD3852975C0D40092ED02 /* GoogleService-Info.plist */,
+				D1480B6129BB688C00181103 /* GoogleService-Info.plist */,
 				D10CD372297422040092ED02 /* Resources */,
 				D10CD371297421F60092ED02 /* ViewModels */,
 				D10CD370297421ED0092ED02 /* Models */,
@@ -241,7 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D10CD3672974217F0092ED02 /* LaunchScreen.storyboard in Resources */,
-				D10CD3862975C0D40092ED02 /* GoogleService-Info.plist in Resources */,
+				D1480B6229BB688C00181103 /* GoogleService-Info.plist in Resources */,
 				D10CD3642974217F0092ED02 /* Assets.xcassets in Resources */,
 				D10CD3622974217E0092ED02 /* Main.storyboard in Resources */,
 			);
@@ -459,6 +459,8 @@
 				DEVELOPMENT_TEAM = 3G5W52F66Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Chatis/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to take a profile picture";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to select a photo for your profile";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -487,6 +489,8 @@
 				DEVELOPMENT_TEAM = 3G5W52F66Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Chatis/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to take a profile picture";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to select a photo for your profile";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
