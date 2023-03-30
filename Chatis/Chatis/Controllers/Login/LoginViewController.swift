@@ -104,7 +104,7 @@ class LoginViewController: UIViewController {
         scrollView.addSubview(emailField)
         scrollView.addSubview(passwordField)
         scrollView.addSubview(loginButton)
-//        scrollView.addSubview(facebookLoginButton)
+        //        scrollView.addSubview(facebookLoginButton)
         
     }
     
@@ -172,6 +172,9 @@ class LoginViewController: UIViewController {
             }
             
             let user = result.user
+            
+            UserDefaults.standard.set(email, forKey: "email")
+             
             print("Logged In User: \(user)")
             strongSelf.navigationController?.dismiss(animated: true, completion: nil)
         }
@@ -217,7 +220,7 @@ extension LoginViewController: LoginButtonDelegate {
         }
         
         let facebookRequest = FBSDKLoginKit.GraphRequest(graphPath: "me",
-                                                         parameters: ["fields": "email, name"],
+                                                         parameters: ["fields": "email, first_name, last_name, picture.type(large)"],
                                                          tokenString: token,
                                                          version: nil,
                                                          httpMethod: .get)
@@ -228,30 +231,45 @@ extension LoginViewController: LoginButtonDelegate {
                 print("Failed to make facebook graph request")
                 return
             }
-            print("\(result)")
             
-            guard let userName = result["name"] as? String,
-                  let email = result["email"] as? String else {
+            guard let firstName = result["first_name"] as? String,
+                  let lastName = result["last_name"] as? String,
+                  let email = result["email"] as? String,
+                  let picture = result["picture"] as? [String: Any],
+                  let data = picture["data"] as? [String: Any],
+                  let pictureUrl = data["url"] as? String else {
                 print("Failed to get email and name from fb result")
                 return
             }
             
-            let nameComponents = userName.components(separatedBy: " ")
-            guard nameComponents.count == 2 else {
-                return
-            }
-            
-            let firstName = nameComponents[0]
-            let lastName = nameComponents[1]
-            
-            let chatUser = ChatAppUser(firstName: firstName,
-                                       lastName: lastName,
-                                       emailAddress: email)
+            UserDefaults.standard.set(email, forKey: "email")
             
             DatabaseManager.shared.userExists(with: email) { exists in
                 if !exists {
+                    let chatUser = ChatAppUser(firstName: firstName,
+                                               lastName: lastName,
+                                               emailAddress: email)
+                    
                     DatabaseManager.shared.insertUser(with: chatUser, completion: { success in
-                        
+                        if success {
+                            
+                            guard let url = URL(string: pictureUrl) else { return }
+                            
+                            URLSession.shared.dataTask(with: url, completionHandler: { data, _, error in
+                                guard let data = data else { return }
+                                // upload image
+                                let fileName = chatUser.profilePictureName
+                                StorageManager.shared.uploadProfilePicture(with: data, fileName: fileName, completion: { result in
+                                    switch result {
+                                    case .success(let downloadUrl):
+                                        UserDefaults.standard.set(downloadUrl, forKey: "profile_picture_url")
+                                        print(downloadUrl)
+                                    case .failure(let error):
+                                        print("Storage manager error: \(error)")
+                                    }
+                                })
+                            })
+                        }
                     })
                 }
             }
